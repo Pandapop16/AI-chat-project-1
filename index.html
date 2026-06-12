@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- САЙДБАР -->
+    <div class="sidebar">
+      <div class="sidebar-logo">🤖 AI Chat
+        <button id="closeBtn">X</button>
+      </div>
+
+      <button id="newChatBtn">✏️ Новый чат</button>
+      
+      <div class="sidebar-label">История</div>
+      <div id="chatList"></div>
+
+      <div class="sidebar-label">Модель</div>
+      <select id="modelSelect">
+        <option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
+        <option value="llama-3.1-8b-instant">Llama 3.1 8B Fast</option>
+        <option value="mixtral-8x7b-32768">Mixtral 8x7B</option>
+        <option value="gemma2-9b-it">Gemma 2 9B</option>
+      </select>
+
+      <div class="sidebar-bottom">
+        <button id="themeBtn">🌙 Сменить тему</button>
+        <button id="exportBtn">📥 Экспорт чата</button>
+      </div>
+    </div>
+
+    <!-- ОСНОВНАЯ ЧАСТЬ -->
+    <div class="main">
+
+      <div class="chat-header">
+          <button id="menuBtn">☰</button>
+        <div class="chat-header-left">
+          <span class="header-title">AI ассистент</span>
+          <span class="status">● онлайн</span>
+        </div>
+        <div class="chat-header-right">
+          <span id="messageCount">0 сообщений</span>
+          <button id="clearBtn">🗑 Очистить</button>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="messages"></div>
+
+      <div class="chat-input-area">
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Напиши что-нибудь..." autofocus>
+          <button id="sendBtn">➤</button>
+        </div>
+        <p class="input-hint">Enter для отправки</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
