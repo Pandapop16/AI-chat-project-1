@@ -12,7 +12,7 @@ const clearBtn = document.getElementById("clearBtn")
 
 let count = 0
 let isDark = true
-const GROQ_KEY = "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"
+const GROQ_KEY = ""
 
 // Сохранённые сообщения для экспорта и localStorage
 let savedMessages = []
